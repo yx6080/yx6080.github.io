@@ -210,7 +210,6 @@
 <p>用户在浏览网站、使用即时通讯软件、甚至在阅读电子邮件时，通常会点击其中的链接。攻击者通过在链接中插入恶意代码，就能够盗取用户信息或在终端用户系统上执行恶意代码。</p>
 <p><strong>2.解决建议</strong></p>
 <p>1)推荐措施包括实施安全编程技术确保正确过滤用户提供的数据，并编码所有用户提供的数据以防以可执行的格式向终端用户发送注入的脚本。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PHP: <span class="keyword">string</span> htmlspecialchars (<span class="keyword">string</span> <span class="keyword">string</span> [,<span class="keyword">int</span> quote_style])</span><br><span class="line">ASP/ASP.NET: <span class="built_in">Server</span>.HTMLEncode (strHTML <span class="keyword">String</span>)</span><br></pre></td></tr></table></figure>
 <p>2)确保web应用对所有输入参数（cookies、头、查询字符串、表单、隐藏字段等）验证严格定义的预期结果。 </p>
 <p>3)检查POST和GET请求的响应，确保返回内容是预期的且有效。</p>
@@ -256,7 +255,6 @@
 <p>如果用户不够谨慎，就有可能浏览该标记，却意识不到自己会离开原始站点而进入恶意的站点。之后，攻击者便可以诱导用户再次登录，然后获取其登录凭证。</p>
 <p>2.解决建议</p>
 <p>建议过滤出所有以下字符： </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">[1]</span> |（竖线符号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[2]</span> &amp; （&amp; 符号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[3]</span> ;（分号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[4]</span> $（美元符号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[5]</span> %（百分比符号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[6]</span> @（at符号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[7]</span> '（单引号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[8]</span> <span class="string">"（引号）</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"><span class="subst">[9]</span> \'（反斜杠转义单引号）</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"><span class="subst">[10]</span> \"</span>（反斜杠转义引号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[11]</span> &lt;&gt;（尖括号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[12]</span> ()（括号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[13]</span> +（加号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[14]</span> CR（回车符，ASCII 0x0d）</span><br><span class="line"></span><br><span class="line"><span class="comment">[15]</span> LF（换行，ASCII 0x0a）</span><br><span class="line"></span><br><span class="line"><span class="comment">[16]</span> ,（逗号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[17]</span> \（反斜杠）</span><br></pre></td></tr></table></figure>
 <h2 id="敏感信息泄露"><a href="#敏感信息泄露" class="headerlink" title="敏感信息泄露"></a>敏感信息泄露</h2><p>风险等级:中危</p>
 <p><strong>1.漏洞描述</strong></p>
@@ -310,7 +308,6 @@
 <p>确认rewrite模块激活（httpd.conf，下面一行前面没有#):</p>
 <p>LoadModule rewrite_module modules/mod_rewrite.so</p>
 <p>在各虚拟主机的配置文件里添加如下语句：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute"><span class="nomarkup">RewriteEngine</span></span> <span class="literal">On</span></span><br><span class="line"><span class="attribute"><span class="nomarkup">RewriteCond</span></span> <span class="variable">%&#123;REQUEST_METHOD&#125;</span> ^TRACE</span><br><span class="line"><span class="attribute"><span class="nomarkup">RewriteRule</span></span> .* -[F]</span><br></pre></td></tr></table></figure>
 <h2 id="慢速攻击"><a href="#慢速攻击" class="headerlink" title="慢速攻击"></a>慢速攻击</h2><p>风险等级:中危</p>
 <p><strong>1.漏洞描述</strong></p>
@@ -318,13 +315,11 @@
 <p><strong>2.解决建议</strong></p>
 <p>a、限制web服务器的HTTP头部传输的最大许可时间。</p>
 <p>b、检查日志，查找类似的错误报警。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="builtin-name">error</span>]<span class="built_in"> server </span>reached MaxClients setting, consider raising the MaxClients setting</span><br></pre></td></tr></table></figure>
 <p><a href="http://www.w3dev.cn/article/20120404/http-slower-post-data-dos-attack-apache.aspx" target="_blank" rel="noopener">http-slower-post-data-dos-attack-apache</a></p>
 <h2 id="host头部攻击"><a href="#host头部攻击" class="headerlink" title="host头部攻击"></a>host头部攻击</h2><p>风险等级:中危</p>
 <p><strong>1.漏洞描述</strong></p>
 <p>为了方便的获得网站域名，开发人员一般依赖于HTTP Host header。例如，在php里用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash">_SERVER[<span class="string">"HTTP_HOST"</span>]。</span></span><br></pre></td></tr></table></figure>
 <p>但是这个header是不可信赖的，如果应用程序没有对host header值进行处理，就有可能造成恶意代码的传入。</p>
 <p><strong>2.解决建议</strong></p>

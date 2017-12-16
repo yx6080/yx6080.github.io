@@ -331,7 +331,6 @@
 <p><strong>解决建议</strong></p>
 </blockquote>
 <p>关闭devMode:在struts.xml 设置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">constant</span> <span class="built_in">name</span>=<span class="string">"struts.devMode"</span> value=<span class="string">"false"</span> /&gt;</span><br></pre></td></tr></table></figure>
 <p>from:<a href="http://blog.csdn.net/qq_29277155/article/details/51959041" target="_blank" rel="noopener">http://blog.csdn.net/qq_29277155/article/details/51959041</a></p>
 <h2 id="Struts2-S2-016命令执行漏洞-S2-016"><a href="#Struts2-S2-016命令执行漏洞-S2-016" class="headerlink" title="Struts2 S2-016命令执行漏洞(S2-016)"></a>Struts2 S2-016命令执行漏洞(S2-016)</h2><blockquote>
@@ -350,7 +349,6 @@
 <p><strong>解决建议</strong></p>
 </blockquote>
 <p>1、升级structs 2到2.3.15.3版本<br>2、如果漏洞还存在<br>关 debug模式，请关一下，Apache Struts 2的Dynamic Method Invocation，也关一下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;constant <span class="attribute">name</span>=<span class="string">"struts.devMode"</span> <span class="attribute">value</span>=<span class="string">"false"</span> /&gt; </span><br><span class="line">&lt;constant <span class="attribute">name</span>=<span class="string">"struts.enable.DynamicMethodInvocation"</span> <span class="attribute">value</span>=<span class="string">"false"</span>/&gt;</span><br></pre></td></tr></table></figure>
 <p>参考：<br><a href="http://blog.csdn.net/zhaozhanyong/article/details/50510100" target="_blank" rel="noopener">http://blog.csdn.net/zhaozhanyong/article/details/50510100</a><br><a href="https://github.com/Medicean/VulApps/tree/master/s/struts2/s2-019" target="_blank" rel="noopener">https://github.com/Medicean/VulApps/tree/master/s/struts2/s2-019</a></p>
 <h2 id="Struts2-S2-032命令执行漏洞-S2-032"><a href="#Struts2-S2-032命令执行漏洞-S2-032" class="headerlink" title="Struts2 S2-032命令执行漏洞(S2-032)"></a>Struts2 S2-032命令执行漏洞(S2-032)</h2><blockquote>
@@ -364,7 +362,6 @@
 </blockquote>
 <p>Struts官方给出的解决方案是禁用动态方法调用功能，或者升级到Struts 2.3.20.2，2.3.24.2或2.3.28.1。</p>
 <p>修改Struts2的配置文件如下：将“struts.enable.DynamicMethodInvocation”的值设置为false，比如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt; <span class="built_in">constant</span> <span class="built_in">name</span>=<span class="string">"struts.enable.DynamicMethodInvocation"</span> value=<span class="string">"false"</span> / &gt;;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>2.3.28.1版本Struts下载地址：<br><a href="https://struts.apache.org/download.cgi#struts23281。" target="_blank" rel="noopener">https://struts.apache.org/download.cgi#struts23281。</a></p>
