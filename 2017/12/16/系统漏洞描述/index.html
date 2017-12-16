@@ -1,0 +1,639 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <!--SEO-->
+
+<meta name="description" content="色即是空，空即是色"/>
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>系统漏洞描述及修复建议 | 小明&#39;s blog</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="小明&#39;s blog" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css?rev=9.12.0">
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+    <div class="hide">
+    	<script src="https://s4.cnzz.com/z_stat.php?id=123456700&web_id=123456700" language="JavaScript"></script>
+    </div>
+
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?666";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+	<script>
+		(function(i, s, o, g, r, a, m) {
+		    i['GoogleAnalyticsObject'] = r;
+		    i[r] = i[r] || function() {
+		        (i[r].q = i[r].q || []).push(arguments)
+		    }, i[r].l = 1 * new Date();
+		    a = s.createElement(o),
+		    m = s.getElementsByTagName(o)[0];
+		    a.async = 1;
+		    a.src = g;
+		    m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', '666', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+
+	<script type="text/javascript" src="http://tajs.qq.com/stats?sId=123456700" charset="UTF-8"></script>
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                 <img src="/img/branding.png" alt="Snippet 博客主题">  
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/学习/"><i class="fa fa-fw "></i>学习</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/生活/"><i class="fa fa-fw "></i>生活</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="系统漏洞描述及修复建议">
+            
+            系统漏洞描述及修复建议
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <span>无</span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            学习
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/12/16</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <p><a href="http://obgutsg63.bkt.clouddn.com/blog/1509936295475.jpg" target="_blank" rel="noopener"><img src="http://obgutsg63.bkt.clouddn.com/blog/1509936295475.jpg" alt="系统漏洞"></a></p>
+<h1 id="弱口令"><a href="#弱口令" class="headerlink" title="弱口令"></a>弱口令</h1><h2 id="telnet弱口令"><a href="#telnet弱口令" class="headerlink" title="telnet弱口令"></a>telnet弱口令</h2><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>开启了telnet服务，且telnet登陆存在弱口令，入侵者可远程telnet到该服务器上做相应的非法操作。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>关闭telnet服务</p>
+<h2 id="telnet不安全传输"><a href="#telnet不安全传输" class="headerlink" title="telnet不安全传输"></a>telnet不安全传输</h2><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>开启了telnet服务，telnet密码通过明文传输，如果攻击者监听，则可获取到密码。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>关闭telnet服务</p>
+<h2 id="ftp弱口令"><a href="#ftp弱口令" class="headerlink" title="ftp弱口令"></a>ftp弱口令</h2><blockquote>
+<p><strong>漏洞描述</strong></p>
+</blockquote>
+<p>存FTP匿名登录，攻击者可登录系统获取文件数据。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>建议设置复杂度较高的认证口令，或关闭不必要的服务。</p>
+<h2 id="SMB共享弱口令"><a href="#SMB共享弱口令" class="headerlink" title="SMB共享弱口令"></a>SMB共享弱口令</h2><blockquote>
+<p><strong>漏洞描述</strong></p>
+</blockquote>
+<p>入侵者可以通过与Windows主机建立一个SMB会话来获取目标主机的一些信息，例如目标主机的共享列表，管理用户名等等。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>可以限制匿名用户对Windows NT/2000/XP系统的LSA组件的访问，这可以避免匿名用户通过LSA获取系统的一些公开信息，例如共享列表信息。</p>
+<h2 id="SNMP共享团体名"><a href="#SNMP共享团体名" class="headerlink" title="SNMP共享团体名"></a>SNMP共享团体名</h2><blockquote>
+<p><strong>漏洞描述</strong></p>
+</blockquote>
+<p>开放的SNMP服务采用默认的字符串“public”作为口令。攻击者利用该漏洞可查看大量系统自身信息，为进一步的渗透提供辅助信息。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>若无管理必要，可关闭该服务，或者更改为private私有字符串。</p>
+<h2 id="ssh弱口令"><a href="#ssh弱口令" class="headerlink" title="ssh弱口令"></a>ssh弱口令</h2><blockquote>
+<p><strong>漏洞描述</strong></p>
+</blockquote>
+<p>该服务器开启了ssh服务，但是ssh存在弱密码，攻击者可通过弱密码登陆到该服务器上，上传响应的文件并执行相应的命令。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>建议更改默认口令。</p>
+<h2 id="远程桌面账户弱口令-3389"><a href="#远程桌面账户弱口令-3389" class="headerlink" title="远程桌面账户弱口令(3389)"></a>远程桌面账户弱口令(3389)</h2><blockquote>
+<p><strong>漏洞描述</strong></p>
+</blockquote>
+<p>开启了远程桌面服务，远程桌面服务允许用户进行远程连接到服务器，该默认账户存在弱口令。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>更改弱口令为更复杂的密码，如不需要，关闭远程桌面服务。</p>
+<h2 id="PHPMyAdmin空口令漏洞"><a href="#PHPMyAdmin空口令漏洞" class="headerlink" title="PHPMyAdmin空口令漏洞"></a>PHPMyAdmin空口令漏洞</h2><blockquote>
+<p><strong>漏洞描述</strong></p>
+</blockquote>
+<p>PHPMyAdmin没有设置口令，任何人都可以控制数据库。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>在PHPMyAdmin中为帐号加一个安全的口令。</p>
+<p>一个安全的口令应该包含以下四项中的三项： </p>
+<ul>
+<li>（1）大写字母 </li>
+<li>（2）小写字母 </li>
+<li>（3）特殊字符 </li>
+<li>（4）数字</li>
+</ul>
+<h2 id="Oracle数据库空口令漏洞"><a href="#Oracle数据库空口令漏洞" class="headerlink" title="Oracle数据库空口令漏洞"></a>Oracle数据库空口令漏洞</h2><blockquote>
+<p><strong>漏洞描述</strong></p>
+</blockquote>
+<p>Oracle服务器未设置管理帐号口令，导致可以远程不使用口令控制Oracle Server。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>为oracle数据库账号加一个安全的口令。</p>
+<p>一个安全的口令应该包含以下四项中的三项： </p>
+<ul>
+<li>（1）大写字母 </li>
+<li>（2）小写字母 </li>
+<li>（3）特殊字符 </li>
+<li>（4）数字</li>
+</ul>
+<h2 id="mysql数据库空口令漏洞"><a href="#mysql数据库空口令漏洞" class="headerlink" title="mysql数据库空口令漏洞"></a>mysql数据库空口令漏洞</h2><blockquote>
+<p><strong>漏洞描述</strong></p>
+</blockquote>
+<p>MySQL服务器未设置root帐号口令或者某个帐号使用了简单的口令，导致可以远程不使用口令连接或者很容易猜测到帐号口令。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>为mysql数据库账号加一个安全的口令。</p>
+<p>一个安全的口令应该包含以下四项中的三项： </p>
+<ul>
+<li>（1）大写字母 </li>
+<li>（2）小写字母 </li>
+<li>（3）特殊字符 </li>
+<li>（4）数字</li>
+</ul>
+<h1 id="ms-漏洞"><a href="#ms-漏洞" class="headerlink" title="ms**_**漏洞"></a><code>ms**_**漏洞</code></h1><h2 id="SMB-缓冲区溢出远程执行代码漏洞-ms09-001"><a href="#SMB-缓冲区溢出远程执行代码漏洞-ms09-001" class="headerlink" title="SMB 缓冲区溢出远程执行代码漏洞(ms09_001)"></a>SMB 缓冲区溢出远程执行代码漏洞(ms09_001)</h2><blockquote>
+<p><strong>漏洞描述</strong></p>
+</blockquote>
+<p>Microsoft 服务器消息块 (SMB) 协议软件处理特制 SMB 数据包的方式中存在一个未经身份验证的远程执行代码漏洞。 利用该漏洞的尝试不要求进行身份验证，从而使攻击者可以通过向运行 Server 服务的计算机发送特制网络消息来利用该漏洞。 成功利用此漏洞的攻击者可以完全控制系统。 利用此漏洞的大多数尝试会导致系统拒绝服务条件，但是远程执行代码在理论上是可行的。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>补丁更新地址：<a href="https://technet.microsoft.com/zh-cn/library/security/ms09-001.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms09-001.aspx</a></p>
+<h1 id="http-sys远程命令执行漏洞-ms15-034"><a href="#http-sys远程命令执行漏洞-ms15-034" class="headerlink" title="http.sys远程命令执行漏洞(ms15_034)"></a>http.sys远程命令执行漏洞(ms15_034)</h1><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>远程执行代码漏洞存在于 HTTP 协议堆栈 (HTTP.sys) 中，当 HTTP.sys 未正确分析经特殊设计的 HTTP 请求时会导致此漏洞。 成功利用此漏洞的攻击者可以在系统帐户的上下文中执行任意代码。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>补丁更新地址：<a href="https://technet.microsoft.com/zh-cn/library/security/MS15-034" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/MS15-034</a></p>
+<h2 id="远程桌面中的漏洞可能允许远程执行代码-ms12-020"><a href="#远程桌面中的漏洞可能允许远程执行代码-ms12-020" class="headerlink" title="远程桌面中的漏洞可能允许远程执行代码(ms12_020)"></a>远程桌面中的漏洞可能允许远程执行代码(ms12_020)</h2><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>远程桌面协议访问内存中未正确初始化或已被删除的对象的方式中存在一个远程执行代码漏洞。成功利用此漏洞的攻击者可以在目标系统上运行任意代码。攻击者可随后安装程序；(蓝屏)</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>补丁下载链接： <a href="https://technet.microsoft.com/zh-cn/library/security/ms12-020.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms12-020.aspx</a></p>
+<h1 id="Apache-Tomcat版本信息泄露"><a href="#Apache-Tomcat版本信息泄露" class="headerlink" title="Apache Tomcat版本信息泄露"></a>Apache Tomcat版本信息泄露</h1><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>出于性能考虑，Tomcat在解析请求时通常会将获得的信息缓存于两个位置，即：内部的request对象和processor对象。这些对象不能同时回收。当发生某些错误需要被记录到Tomcat访问日志时，访问记录process将在requset对象被回收后触发该对象re-population。然而，在request对象用于下一个请求前它尚未回收。这就会导致先前请求的信息泄露（例如，远程IP地址、HTTP头等）。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>更新tomcat的版本，升级到高版本</p>
+<h1 id="Structs2类漏洞"><a href="#Structs2类漏洞" class="headerlink" title="Structs2类漏洞"></a>Structs2类漏洞</h1><h2 id="Structs2-devmode漏洞"><a href="#Structs2-devmode漏洞" class="headerlink" title="Structs2 devmode漏洞"></a>Structs2 devmode漏洞</h2><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>Apache Struts 2是世界上最流行的Java Web服务器框架之一。Apache Struts2在使用REST插件的情况下，攻击者使用REST调用恶意表达式可以远程执行代码。该漏洞编号为CVE-2016-4438，目前命名为S2-037。,黑客可以利用漏洞直接执行任意代码，绕过文件限制，上传文件，执行远程命令，控制服务器，直接盗取用户的所有资料，该漏洞广泛影响所有struts版本。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>关闭devMode:在struts.xml 设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">constant</span> <span class="built_in">name</span>=<span class="string">"struts.devMode"</span> value=<span class="string">"false"</span> /&gt;</span><br></pre></td></tr></table></figure>
+<p>from:<a href="http://blog.csdn.net/qq_29277155/article/details/51959041" target="_blank" rel="noopener">http://blog.csdn.net/qq_29277155/article/details/51959041</a></p>
+<h2 id="Struts2-S2-016命令执行漏洞-S2-016"><a href="#Struts2-S2-016命令执行漏洞-S2-016" class="headerlink" title="Struts2 S2-016命令执行漏洞(S2-016)"></a>Struts2 S2-016命令执行漏洞(S2-016)</h2><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>此漏洞影响struts2.0-struts2.3的所有版本，可直接导致服务器被远程控制从而引起数据泄漏,影响巨大</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>参考：<br><a href="http://www.cnblogs.com/lianliang/p/5457686.html" target="_blank" rel="noopener">http://www.cnblogs.com/lianliang/p/5457686.html</a><br><a href="http://www.freebuf.com/vuls/11220.html" target="_blank" rel="noopener">http://www.freebuf.com/vuls/11220.html</a></p>
+<h2 id="Struts2-S2-019命令执行漏洞-S2-019"><a href="#Struts2-S2-019命令执行漏洞-S2-019" class="headerlink" title="Struts2 S2-019命令执行漏洞(S2-019)"></a>Struts2 S2-019命令执行漏洞(S2-019)</h2><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>公告：<a href="http://struts.apache.org/docs/s2-019.html" target="_blank" rel="noopener">http://struts.apache.org/docs/s2-019.html</a></p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>1、升级structs 2到2.3.15.3版本<br>2、如果漏洞还存在<br>关 debug模式，请关一下，Apache Struts 2的Dynamic Method Invocation，也关一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;constant <span class="attribute">name</span>=<span class="string">"struts.devMode"</span> <span class="attribute">value</span>=<span class="string">"false"</span> /&gt; </span><br><span class="line">&lt;constant <span class="attribute">name</span>=<span class="string">"struts.enable.DynamicMethodInvocation"</span> <span class="attribute">value</span>=<span class="string">"false"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<p>参考：<br><a href="http://blog.csdn.net/zhaozhanyong/article/details/50510100" target="_blank" rel="noopener">http://blog.csdn.net/zhaozhanyong/article/details/50510100</a><br><a href="https://github.com/Medicean/VulApps/tree/master/s/struts2/s2-019" target="_blank" rel="noopener">https://github.com/Medicean/VulApps/tree/master/s/struts2/s2-019</a></p>
+<h2 id="Struts2-S2-032命令执行漏洞-S2-032"><a href="#Struts2-S2-032命令执行漏洞-S2-032" class="headerlink" title="Struts2 S2-032命令执行漏洞(S2-032)"></a>Struts2 S2-032命令执行漏洞(S2-032)</h2><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>公告：<a href="http://struts.apache.org/docs/s2-032.html" target="_blank" rel="noopener">http://struts.apache.org/docs/s2-032.html</a></p>
+<p>该漏洞的成因是用户开启动态方法调用（Dynamic Method Invocation）的情况下，攻击者能够使用method:前缀执行远程代码。</p>
+<p>该漏洞的成因是用户开启动态方法调用（Dynamic Method Invocation）的情况下，攻击者能够使用method:前缀执行远程代码。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>Struts官方给出的解决方案是禁用动态方法调用功能，或者升级到Struts 2.3.20.2，2.3.24.2或2.3.28.1。</p>
+<p>修改Struts2的配置文件如下：将“struts.enable.DynamicMethodInvocation”的值设置为false，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt; <span class="built_in">constant</span> <span class="built_in">name</span>=<span class="string">"struts.enable.DynamicMethodInvocation"</span> value=<span class="string">"false"</span> / &gt;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>2.3.28.1版本Struts下载地址：<br><a href="https://struts.apache.org/download.cgi#struts23281。" target="_blank" rel="noopener">https://struts.apache.org/download.cgi#struts23281。</a></p>
+<p>参考：<br><a href="http://blog.csdn.net/langkew/article/details/51538415" target="_blank" rel="noopener">http://blog.csdn.net/langkew/article/details/51538415</a><br><a href="https://github.com/Medicean/VulApps/blob/master/s/struts2/s2-032/" target="_blank" rel="noopener">https://github.com/Medicean/VulApps/blob/master/s/struts2/s2-032/</a></p>
+</blockquote>
+<h2 id="Struts2-S2-037命令执行漏洞-S2-037"><a href="#Struts2-S2-037命令执行漏洞-S2-037" class="headerlink" title="Struts2 S2-037命令执行漏洞(S2-037)"></a>Struts2 S2-037命令执行漏洞(S2-037)</h2><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>公告：<a href="https://cwiki.apache.org/confluence/display/WW/S2-037" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/WW/S2-037</a></p>
+<p>使用REST插件时，可能会传递一个恶意的表达式，用于在服务器端执行任意代码。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>更新到Apache Struts version 2.3.29版本</p>
+<h2 id="Struts2-Jakarta-Plugin插件远程代码执行漏洞-S2-045"><a href="#Struts2-Jakarta-Plugin插件远程代码执行漏洞-S2-045" class="headerlink" title="Struts2_Jakarta_Plugin插件远程代码执行漏洞(S2-045)"></a>Struts2_Jakarta_Plugin插件远程代码执行漏洞(S2-045)</h2><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>Struts使用的Jakarta解析文件上传请求包不当，当远程攻击者构造恶意的Content-Type，可能导致远程命令执行。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>受影响用户可升级版本至Apache Struts 2.3.32 或 Apache Struts 2.5.10.1以消除漏洞影响。</p>
+<blockquote>
+<p>Struts 2.3.32<br>下载地址：<a href="https://dist.apache.org/repos/dist/dev/struts/" target="_blank" rel="noopener">https://dist.apache.org/repos/dist/dev/struts/</a></p>
+<p>Struts 2.5.10.1<br>下载地址：<a href="https://dist.apache.org/repos/dist/dev/struts/" target="_blank" rel="noopener">https://dist.apache.org/repos/dist/dev/struts/</a></p>
+<p>相关漏洞和修复方法说明地址：<br><a href="https://cwiki.apache.org/confluence/display/WW/S2-045" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/WW/S2-045</a> <a href="https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.3.32" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.3.32</a> </p>
+<p>临时解决办法<br>如用户不方便升级，可采取如下临时解决方案：删除commons-fileupload-x.x.x.jar文件（会造成上传功能不可用）。</p>
+</blockquote>
+<h2 id="Struts2-Jakarta-Plugin插件远程代码执行漏洞-S2-046"><a href="#Struts2-Jakarta-Plugin插件远程代码执行漏洞-S2-046" class="headerlink" title="Struts2_Jakarta_Plugin插件远程代码执行漏洞(S2-046)"></a>Struts2_Jakarta_Plugin插件远程代码执行漏洞(S2-046)</h2><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>漏洞公告：<a href="https://cwiki.apache.org/confluence/display/WW/S2-046" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/WW/S2-046</a></p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+<p>升级版本： 请升级至Struts2安全版本<br>Struts 2.3.32：<a href="https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.3.32" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.3.32</a><br>Struts 2.5.10.1：<a href="https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.5.10.1" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.5.10.1</a> </p>
+</blockquote>
+<h1 id="使用了脆弱的Javascript库"><a href="#使用了脆弱的Javascript库" class="headerlink" title="使用了脆弱的Javascript库"></a>使用了脆弱的Javascript库</h1><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>JavaScript作为一种相当简单但功能强大的客户端脚本语言，本质是一种解释型语言。其源代码可以轻松被任何人获取到。开发者将各式敏感信息存储在JavaScript脚本中，由于JS的特性，攻击者可以对这些信息一览无余，从而导致对WEB服务和用户隐私造成不同程度的威胁。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+</blockquote>
+<p>升级到高版本的Javascript 库。</p>
+<h1 id="SSL-v3-PODDLE-CVE-2014-3566"><a href="#SSL-v3-PODDLE-CVE-2014-3566" class="headerlink" title="SSL v3 PODDLE(CVE-2014-3566)"></a>SSL v3 PODDLE(CVE-2014-3566)</h1><blockquote>
+<p><strong>漏洞描述：</strong></p>
+</blockquote>
+<p>由Google发现的POODLE漏洞(Padding Oracle On Downloaded Legacy Encryption vulnerability)，可被攻击者用来窃取采用SSL3.0版加密通信过程中的内容，又被称为“贵宾犬攻击”。</p>
+<blockquote>
+<p><strong>解决建议</strong></p>
+<p>参考：<br><a href="https://access.redhat.com/articles/1232123" target="_blank" rel="noopener">https://access.redhat.com/articles/1232123</a><br><a href="http://www.linuxidc.com/Linux/2014-10/108103.htm" target="_blank" rel="noopener">http://www.linuxidc.com/Linux/2014-10/108103.htm</a></p>
+</blockquote>
+<p>注：上述内容均来自互联网</p>
+<p>​                        </p>
+<p>​                        </p>
+<p>————-本文结束**感谢您的阅读————-</p>
+<p>​                      <a href="http://airs-sec.com/tags/系统漏洞/" target="_blank" rel="noopener">**系统漏洞</a>                  </p>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">Snippet</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2017/12/16/web漏洞描述/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=7654321"></script>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>新人一枚，菜鸟一枚，小白一枚！欢迎指点~ <br/>
+你懂得：<a href="https://www.baidu.com/">我不懂</a> <br/>
+<hr/><center>月明星稀</center> <br/>
+<center> 月辉依缺岳，明晓破空冥。</center> <br/>
+<center> 星璨尽繁心，稀世愿夙兮。</center> <br/>
+赚钱秘笈：<a href="http://www.eastmoney.com/">苟富贵，勿相忘<br/>
+<p align="right">——安安稳稳不乱想，平平淡淡才是真！</p></a>
+</p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/yx6080" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+	            <a href="/" rel="external nofollow" title="QQ群" target="_blank">
+			    	<i class="users fa fa-users"></i>
+			    </a>
+            
+	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
+			    	<i class="feed fa fa-feed"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/"><i class="fa" aria-hidden="true">十二月 2017</i></a><span class="archive-list-count">3</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/学习/" style="font-size: 10px;">学习</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://www.airs-sec.com" class="fa" target="_blank">凉城Lc</a>
+        
+            <a href="http://www.secice.cn" class="fa" target="_blank">iceH</a>
+        
+            <a href="http://www.errorsec.top" class="fa" target="_blank">error</a>
+        
+            <a href="http://www.doubleyi.xin" class="fa" target="_blank">DOUBLE 翊</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2017
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <script src="/assets/highlight.pack.js?rev=@@hash"></script>
+  <script>
+     hljs.initHighlightingOnLoad(); //初始化代码高亮 
+  </script>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
