@@ -291,7 +291,7 @@
 <li>（3）特殊字符 </li>
 <li>（4）数字</li>
 </ul>
-<h1 id="ms-漏洞"><a href="#ms-漏洞" class="headerlink" title="ms**_**漏洞"></a><code>ms**_**漏洞</code></h1><h2 id="SMB-缓冲区溢出远程执行代码漏洞-ms09-001"><a href="#SMB-缓冲区溢出远程执行代码漏洞-ms09-001" class="headerlink" title="SMB 缓冲区溢出远程执行代码漏洞(ms09_001)"></a>SMB 缓冲区溢出远程执行代码漏洞(ms09_001)</h2><blockquote>
+<h1 id="ms-系列漏洞"><a href="#ms-系列漏洞" class="headerlink" title="ms_系列漏洞"></a>ms<strong>_</strong>系列漏洞</h1><h2 id="SMB-缓冲区溢出远程执行代码漏洞-ms09-001"><a href="#SMB-缓冲区溢出远程执行代码漏洞-ms09-001" class="headerlink" title="SMB 缓冲区溢出远程执行代码漏洞(ms09_001)"></a>SMB 缓冲区溢出远程执行代码漏洞(ms09_001)</h2><blockquote>
 <p><strong>漏洞描述</strong></p>
 </blockquote>
 <p>Microsoft 服务器消息块 (SMB) 协议软件处理特制 SMB 数据包的方式中存在一个未经身份验证的远程执行代码漏洞。 利用该漏洞的尝试不要求进行身份验证，从而使攻击者可以通过向运行 Server 服务的计算机发送特制网络消息来利用该漏洞。 成功利用此漏洞的攻击者可以完全控制系统。 利用此漏洞的大多数尝试会导致系统拒绝服务条件，但是远程执行代码在理论上是可行的。</p>
@@ -299,7 +299,7 @@
 <p><strong>解决建议</strong></p>
 </blockquote>
 <p>补丁更新地址：<a href="https://technet.microsoft.com/zh-cn/library/security/ms09-001.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/zh-cn/library/security/ms09-001.aspx</a></p>
-<h1 id="http-sys远程命令执行漏洞-ms15-034"><a href="#http-sys远程命令执行漏洞-ms15-034" class="headerlink" title="http.sys远程命令执行漏洞(ms15_034)"></a>http.sys远程命令执行漏洞(ms15_034)</h1><blockquote>
+<h2 id="http-sys远程命令执行漏洞-ms15-034"><a href="#http-sys远程命令执行漏洞-ms15-034" class="headerlink" title="http.sys远程命令执行漏洞(ms15_034)"></a>http.sys远程命令执行漏洞(ms15_034)</h2><blockquote>
 <p><strong>漏洞描述：</strong></p>
 </blockquote>
 <p>远程执行代码漏洞存在于 HTTP 协议堆栈 (HTTP.sys) 中，当 HTTP.sys 未正确分析经特殊设计的 HTTP 请求时会导致此漏洞。 成功利用此漏洞的攻击者可以在系统帐户的上下文中执行任意代码。</p>
@@ -363,10 +363,8 @@
 <p>Struts官方给出的解决方案是禁用动态方法调用功能，或者升级到Struts 2.3.20.2，2.3.24.2或2.3.28.1。</p>
 <p>修改Struts2的配置文件如下：将“struts.enable.DynamicMethodInvocation”的值设置为false，比如：</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt; <span class="built_in">constant</span> <span class="built_in">name</span>=<span class="string">"struts.enable.DynamicMethodInvocation"</span> value=<span class="string">"false"</span> / &gt;;</span><br></pre></td></tr></table></figure>
-<blockquote>
 <p>2.3.28.1版本Struts下载地址：<br><a href="https://struts.apache.org/download.cgi#struts23281。" target="_blank" rel="noopener">https://struts.apache.org/download.cgi#struts23281。</a></p>
 <p>参考：<br><a href="http://blog.csdn.net/langkew/article/details/51538415" target="_blank" rel="noopener">http://blog.csdn.net/langkew/article/details/51538415</a><br><a href="https://github.com/Medicean/VulApps/blob/master/s/struts2/s2-032/" target="_blank" rel="noopener">https://github.com/Medicean/VulApps/blob/master/s/struts2/s2-032/</a></p>
-</blockquote>
 <h2 id="Struts2-S2-037命令执行漏洞-S2-037"><a href="#Struts2-S2-037命令执行漏洞-S2-037" class="headerlink" title="Struts2 S2-037命令执行漏洞(S2-037)"></a>Struts2 S2-037命令执行漏洞(S2-037)</h2><blockquote>
 <p><strong>漏洞描述：</strong></p>
 </blockquote>
@@ -384,20 +382,18 @@
 <p><strong>解决建议</strong></p>
 </blockquote>
 <p>受影响用户可升级版本至Apache Struts 2.3.32 或 Apache Struts 2.5.10.1以消除漏洞影响。</p>
-<blockquote>
 <p>Struts 2.3.32<br>下载地址：<a href="https://dist.apache.org/repos/dist/dev/struts/" target="_blank" rel="noopener">https://dist.apache.org/repos/dist/dev/struts/</a></p>
 <p>Struts 2.5.10.1<br>下载地址：<a href="https://dist.apache.org/repos/dist/dev/struts/" target="_blank" rel="noopener">https://dist.apache.org/repos/dist/dev/struts/</a></p>
 <p>相关漏洞和修复方法说明地址：<br><a href="https://cwiki.apache.org/confluence/display/WW/S2-045" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/WW/S2-045</a> <a href="https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.3.32" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.3.32</a> </p>
 <p>临时解决办法<br>如用户不方便升级，可采取如下临时解决方案：删除commons-fileupload-x.x.x.jar文件（会造成上传功能不可用）。</p>
-</blockquote>
 <h2 id="Struts2-Jakarta-Plugin插件远程代码执行漏洞-S2-046"><a href="#Struts2-Jakarta-Plugin插件远程代码执行漏洞-S2-046" class="headerlink" title="Struts2_Jakarta_Plugin插件远程代码执行漏洞(S2-046)"></a>Struts2_Jakarta_Plugin插件远程代码执行漏洞(S2-046)</h2><blockquote>
 <p><strong>漏洞描述：</strong></p>
 </blockquote>
 <p>漏洞公告：<a href="https://cwiki.apache.org/confluence/display/WW/S2-046" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/WW/S2-046</a></p>
 <blockquote>
 <p><strong>解决建议</strong></p>
-<p>升级版本： 请升级至Struts2安全版本<br>Struts 2.3.32：<a href="https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.3.32" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.3.32</a><br>Struts 2.5.10.1：<a href="https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.5.10.1" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.5.10.1</a> </p>
 </blockquote>
+<p>升级版本： 请升级至Struts2安全版本<br>Struts 2.3.32：<a href="https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.3.32" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.3.32</a><br>Struts 2.5.10.1：<a href="https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.5.10.1" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/WW/Version+Notes+2.5.10.1</a> </p>
 <h1 id="使用了脆弱的Javascript库"><a href="#使用了脆弱的Javascript库" class="headerlink" title="使用了脆弱的Javascript库"></a>使用了脆弱的Javascript库</h1><blockquote>
 <p><strong>漏洞描述：</strong></p>
 </blockquote>
@@ -412,8 +408,8 @@
 <p>由Google发现的POODLE漏洞(Padding Oracle On Downloaded Legacy Encryption vulnerability)，可被攻击者用来窃取采用SSL3.0版加密通信过程中的内容，又被称为“贵宾犬攻击”。</p>
 <blockquote>
 <p><strong>解决建议</strong></p>
-<p>参考：<br><a href="https://access.redhat.com/articles/1232123" target="_blank" rel="noopener">https://access.redhat.com/articles/1232123</a><br><a href="http://www.linuxidc.com/Linux/2014-10/108103.htm" target="_blank" rel="noopener">http://www.linuxidc.com/Linux/2014-10/108103.htm</a></p>
 </blockquote>
+<p>参考：<br><a href="https://access.redhat.com/articles/1232123" target="_blank" rel="noopener">https://access.redhat.com/articles/1232123</a><br><a href="http://www.linuxidc.com/Linux/2014-10/108103.htm" target="_blank" rel="noopener">http://www.linuxidc.com/Linux/2014-10/108103.htm</a></p>
 <p>注：上述内容均来自互联网</p>
 <p>​                        </p>
 <p>​                        </p>
