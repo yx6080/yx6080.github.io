@@ -189,7 +189,7 @@
     </div>
     
     <div class="post-body post-content">
-        <h1 id=""><a href="#" class="headerlink" title=" "></a> </h1><h2 id="sql注入"><a href="#sql注入" class="headerlink" title="sql注入"></a>sql注入</h2><p>风险等级:高危</p>
+        <h1 id=""><a href="#" class="headerlink" title=" "></a> </h1><h1 id="sql注入"><a href="#sql注入" class="headerlink" title="sql注入"></a>sql注入</h1><p>风险等级:高危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -210,7 +210,7 @@
 <li>网页被篡改；</li>
 <li>数据库所在服务器被攻击从而变为傀儡主机，导致局域网(内网)被入侵。</li>
 </ol>
-<h2 id="xss跨站"><a href="#xss跨站" class="headerlink" title="xss跨站"></a>xss跨站</h2><p>风险等级:高危</p>
+<h1 id="xss跨站"><a href="#xss跨站" class="headerlink" title="xss跨站"></a>xss跨站</h1><p>风险等级:高危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -224,7 +224,7 @@
 <p>2)确保web应用对所有输入参数（cookies、头、查询字符串、表单、隐藏字段等）验证严格定义的预期结果。 </p>
 <p>3)检查POST和GET请求的响应，确保返回内容是预期的且有效。</p>
 <p>4)对所有输入输出做限制，避免出现如script，iframe等字样，不仅在客户端做验证与过滤，服务端更加需要验证和过滤，并且统一编码格式，做好转义处理。</p>
-<h2 id="链接注入"><a href="#链接注入" class="headerlink" title="链接注入"></a>链接注入</h2><p>风险等级:中危</p>
+<h1 id="链接注入"><a href="#链接注入" class="headerlink" title="链接注入"></a>链接注入</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -241,7 +241,7 @@
 <p>对用户输入内容进行过滤。</p>
 <p>通过验证用户输入不能包含危险字符，防止恶意的用户执行应用程序执行计划外的任务，</p>
 <p>例如：启动任意SQL查询、嵌入将在客户端执行的Javascript代码、运行各种操作系统命令，等等。</p>
-<h2 id="LDAP注入漏洞"><a href="#LDAP注入漏洞" class="headerlink" title="LDAP注入漏洞"></a>LDAP注入漏洞</h2><p>风险等级:高危</p>
+<h1 id="LDAP注入漏洞"><a href="#LDAP注入漏洞" class="headerlink" title="LDAP注入漏洞"></a>LDAP注入漏洞</h1><p>风险等级:高危</p>
 <blockquote>
 <p><strong>1.漏洞描述：</strong></p>
 </blockquote>
@@ -255,7 +255,7 @@
 </blockquote>
 <p>1)在查询中对用户输入的数据进行严格过滤；</p>
 <p>2)部署Web应用防火墙；</p>
-<h2 id="命令执行漏洞"><a href="#命令执行漏洞" class="headerlink" title="命令执行漏洞"></a>命令执行漏洞</h2><p>风险等级:高危</p>
+<h1 id="命令执行漏洞"><a href="#命令执行漏洞" class="headerlink" title="命令执行漏洞"></a>命令执行漏洞</h1><p>风险等级:高危</p>
 <blockquote>
 <p><strong>1.漏洞描述：</strong></p>
 </blockquote>
@@ -268,7 +268,7 @@
 <p><strong>3.修复建议：</strong></p>
 </blockquote>
 <p>严格过滤用户输入的数据，禁止执行系统命令</p>
-<h2 id="短文件名泄漏漏洞"><a href="#短文件名泄漏漏洞" class="headerlink" title="短文件名泄漏漏洞"></a>短文件名泄漏漏洞</h2><blockquote>
+<h1 id="短文件名泄漏漏洞"><a href="#短文件名泄漏漏洞" class="headerlink" title="短文件名泄漏漏洞"></a>短文件名泄漏漏洞</h1><blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
 <p>该漏洞由于Windows处理较长文件名时为方便使用较短的文件名代替，攻击者可利用该漏洞尝试获取网站服务器下的文件名。</p>
@@ -283,7 +283,7 @@
 <li>修改Windows配置，关闭短文件名功能。</li>
 <li>部署Web应用防火墙，防止攻击者批量尝试。</li>
 </ul>
-<h2 id="URL存在框架注入漏洞"><a href="#URL存在框架注入漏洞" class="headerlink" title="URL存在框架注入漏洞"></a>URL存在框架注入漏洞</h2><p>风险等级:中危</p>
+<h1 id="URL存在框架注入漏洞"><a href="#URL存在框架注入漏洞" class="headerlink" title="URL存在框架注入漏洞"></a>URL存在框架注入漏洞</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -294,7 +294,7 @@
 </blockquote>
 <p>建议过滤出所有以下字符： </p>
 <figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">[1]</span> |（竖线符号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[2]</span> &amp; （&amp; 符号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[3]</span> ;（分号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[4]</span> $（美元符号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[5]</span> %（百分比符号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[6]</span> @（at符号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[7]</span> '（单引号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[8]</span> <span class="string">"（引号）</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"><span class="subst">[9]</span> \'（反斜杠转义单引号）</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"><span class="subst">[10]</span> \"</span>（反斜杠转义引号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[11]</span> &lt;&gt;（尖括号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[12]</span> ()（括号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[13]</span> +（加号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[14]</span> CR（回车符，ASCII 0x0d）</span><br><span class="line"></span><br><span class="line"><span class="comment">[15]</span> LF（换行，ASCII 0x0a）</span><br><span class="line"></span><br><span class="line"><span class="comment">[16]</span> ,（逗号）</span><br><span class="line"></span><br><span class="line"><span class="comment">[17]</span> \（反斜杠）</span><br></pre></td></tr></table></figure>
-<h2 id="敏感信息泄露"><a href="#敏感信息泄露" class="headerlink" title="敏感信息泄露"></a>敏感信息泄露</h2><p>风险等级:中危</p>
+<h1 id="敏感信息泄露"><a href="#敏感信息泄露" class="headerlink" title="敏感信息泄露"></a>敏感信息泄露</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -316,7 +316,7 @@
 <li>对网站错误信息进行统一返回，模糊化处理；</li>
 <li>对存放敏感信息的文件进行加密并妥善储存，避免泄漏敏感信息。</li>
 </ol>
-<h2 id="目录遍历"><a href="#目录遍历" class="headerlink" title="目录遍历"></a>目录遍历</h2><p>风险等级:中危</p>
+<h1 id="目录遍历"><a href="#目录遍历" class="headerlink" title="目录遍历"></a>目录遍历</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -329,7 +329,7 @@
 <p>关闭WEB服务器目录浏览功能，对CMS进行安全配置或者对低版本的CMS进行补丁升级。</p>
 <p>定期对相关管理人员和技术人员进行安全培训，提高安全技术能力和实际操作能力。</p>
 <p>建立和完善一套有效的安全管理制度，对网站的日常维护和使用进行规范。</p>
-<h2 id="弱口令"><a href="#弱口令" class="headerlink" title="弱口令"></a>弱口令</h2><p>风险等级:中危</p>
+<h1 id="弱口令"><a href="#弱口令" class="headerlink" title="弱口令"></a>弱口令</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -341,7 +341,7 @@
 <p>加强口令密码管理制度，设置强口令，在大型信息系统和运维环境复杂的情况下，可以采用运维管理设备进行密码管理。</p>
 <p>增加验证机制，防爆破机制，限制ip＋cookie访问次数。</p>
 <p>建立和完善一套有效的安全管理制度，对网站的日常维护和使用进行规范。</p>
-<h2 id="黑链"><a href="#黑链" class="headerlink" title="黑链"></a>黑链</h2><p>风险等级:中危</p>
+<h1 id="黑链"><a href="#黑链" class="headerlink" title="黑链"></a>黑链</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -350,9 +350,7 @@
 <p><strong>2.解决建议</strong></p>
 </blockquote>
 <p>对源代码进行全面审查，删除黑链</p>
-<blockquote>
-<h2 id="启用了TRACE"><a href="#启用了TRACE" class="headerlink" title="启用了TRACE"></a>启用了TRACE</h2></blockquote>
-<p>风险等级:中危</p>
+<h1 id="启用了TRACE"><a href="#启用了TRACE" class="headerlink" title="启用了TRACE"></a>启用了TRACE</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -373,7 +371,7 @@
 <p>LoadModule rewrite_module modules/mod_rewrite.so</p>
 <p>在各虚拟主机的配置文件里添加如下语句：</p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute"><span class="nomarkup">RewriteEngine</span></span> <span class="literal">On</span></span><br><span class="line"><span class="attribute"><span class="nomarkup">RewriteCond</span></span> <span class="variable">%&#123;REQUEST_METHOD&#125;</span> ^TRACE</span><br><span class="line"><span class="attribute"><span class="nomarkup">RewriteRule</span></span> .* -[F]</span><br></pre></td></tr></table></figure>
-<h2 id="慢速攻击"><a href="#慢速攻击" class="headerlink" title="慢速攻击"></a>慢速攻击</h2><p>风险等级:中危</p>
+<h1 id="慢速攻击"><a href="#慢速攻击" class="headerlink" title="慢速攻击"></a>慢速攻击</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -385,7 +383,7 @@
 <p>b、检查日志，查找类似的错误报警。</p>
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="builtin-name">error</span>]<span class="built_in"> server </span>reached MaxClients setting, consider raising the MaxClients setting</span><br></pre></td></tr></table></figure>
 <p><a href="http://www.w3dev.cn/article/20120404/http-slower-post-data-dos-attack-apache.aspx" target="_blank" rel="noopener">http-slower-post-data-dos-attack-apache</a></p>
-<h2 id="host头部攻击"><a href="#host头部攻击" class="headerlink" title="host头部攻击"></a>host头部攻击</h2><p>风险等级:中危</p>
+<h1 id="host头部攻击"><a href="#host头部攻击" class="headerlink" title="host头部攻击"></a>host头部攻击</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -398,7 +396,7 @@
 <p>web应用程序应该使用SERVER_NAME而不是host header。</p>
 <p>在Apache和Nginx里可以通过设置一个虚拟机来记录所有的非法host header。</p>
 <p>在Nginx里还可以通过指定一个SERVER_NAME名单，Apache也可以通过指定一个SERVER_NAME名单并开启UseCanonicalName选项。</p>
-<h2 id="KindEditor3-5-5遍历目录漏洞"><a href="#KindEditor3-5-5遍历目录漏洞" class="headerlink" title="KindEditor3.5.5遍历目录漏洞"></a>KindEditor3.5.5遍历目录漏洞</h2><p>风险等级:中危</p>
+<h1 id="KindEditor3-5-5遍历目录漏洞"><a href="#KindEditor3-5-5遍历目录漏洞" class="headerlink" title="KindEditor3.5.5遍历目录漏洞"></a>KindEditor3.5.5遍历目录漏洞</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -408,7 +406,7 @@
 </blockquote>
 <p>目前厂商已经发布了升级补丁以修复这个安全问题，请到厂商的主页下载：</p>
 <p><a href="http://www.kindsoft.Net/" target="_blank" rel="noopener">http://www.kindsoft.Net/</a></p>
-<h2 id="cookie缺少HttpOnly属性"><a href="#cookie缺少HttpOnly属性" class="headerlink" title="cookie缺少HttpOnly属性"></a>cookie缺少HttpOnly属性</h2><blockquote>
+<h1 id="cookie缺少HttpOnly属性"><a href="#cookie缺少HttpOnly属性" class="headerlink" title="cookie缺少HttpOnly属性"></a>cookie缺少HttpOnly属性</h1><blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
 <p>会话cookie中缺少HttpOnly属性会导致攻击者可以通过程序(JS脚本、Applet等)获取到用户的cookie信息，造成用户cookie信息泄露，增加攻击者的跨站脚本攻击威胁。</p>
@@ -419,7 +417,7 @@
 <p><strong>2.解决建议</strong></p>
 </blockquote>
 <p>向所有会话cookie中添加“HttpOnly”属性。 Php.ini session.cookie_httponly=</p>
-<h2 id="存在永久性cookie"><a href="#存在永久性cookie" class="headerlink" title="存在永久性cookie"></a>存在永久性cookie</h2><blockquote>
+<h1 id="存在永久性cookie"><a href="#存在永久性cookie" class="headerlink" title="存在永久性cookie"></a>存在永久性cookie</h1><blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
 <p>发现目标存在永久性Cookie。这可能使攻击者通过其他方式获得用户的会话凭证，这个时候，例如利用xss漏洞获得Cookie或者Session劫持就很有效了，具体分析应用程序的认证，然后使用某些技巧，甚至可以即使对方退出程序也一样永久性获得对方的身份，在未来很长时间甚至永久的控制账户。</p>
@@ -428,7 +426,7 @@
 </blockquote>
 <p>不要设置cookie为永久性的，修改cookie的属性expires的值，将cookie在会话关闭时则无效；或者一段时间内，过期后无效。</p>
 <p>CI配置文件 application/config/config.php关于SESSION COOKIE的配置参数</p>
-<h2 id="在源码中存在用户名和密码泄露"><a href="#在源码中存在用户名和密码泄露" class="headerlink" title="在源码中存在用户名和密码泄露"></a>在源码中存在用户名和密码泄露</h2><p>风险等级:中危</p>
+<h1 id="在源码中存在用户名和密码泄露"><a href="#在源码中存在用户名和密码泄露" class="headerlink" title="在源码中存在用户名和密码泄露"></a>在源码中存在用户名和密码泄露</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -437,7 +435,7 @@
 <p><strong>2.解决建议</strong></p>
 </blockquote>
 <p>删除此类文件或限制此类文件的访问权限。</p>
-<h2 id="错误页面web服务器版本泄露"><a href="#错误页面web服务器版本泄露" class="headerlink" title="错误页面web服务器版本泄露"></a>错误页面web服务器版本泄露</h2><p>风险等级:中危</p>
+<h1 id="错误页面web服务器版本泄露"><a href="#错误页面web服务器版本泄露" class="headerlink" title="错误页面web服务器版本泄露"></a>错误页面web服务器版本泄露</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -449,7 +447,7 @@
 <p>1.关闭web服务器错误提示。</p>
 <p>2.关闭运行平台的错误提示。</p>
 <p>3.建立错误机制，不要把真实的错误反馈给访问者。</p>
-<h2 id="目标网站存在上传下载相关的目录和文件"><a href="#目标网站存在上传下载相关的目录和文件" class="headerlink" title="目标网站存在上传下载相关的目录和文件"></a>目标网站存在上传下载相关的目录和文件</h2><blockquote>
+<h1 id="目标网站存在上传下载相关的目录和文件"><a href="#目标网站存在上传下载相关的目录和文件" class="headerlink" title="目标网站存在上传下载相关的目录和文件"></a>目标网站存在上传下载相关的目录和文件</h1><blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
 <p>检测到目标网站存在上传下载相关的目录和文件。上传目录一般具有可写权限。攻击者可以预测文件上传的路径，便于和目标站点的其他漏洞攻击结合攻击目标服务器。</p>
@@ -457,7 +455,7 @@
 <p><strong>2.解决建议</strong></p>
 </blockquote>
 <p>检查此类目录的访问权限。如果不需要这些目录，建议删除。</p>
-<h2 id="后台登录入口暴露"><a href="#后台登录入口暴露" class="headerlink" title="后台登录入口暴露"></a>后台登录入口暴露</h2><p>风险等级:中危</p>
+<h1 id="后台登录入口暴露"><a href="#后台登录入口暴露" class="headerlink" title="后台登录入口暴露"></a>后台登录入口暴露</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -466,7 +464,7 @@
 <p><strong>2.解决建议</strong></p>
 </blockquote>
 <p>加强访问此类文件的认证和使用安全。<br>如果不需要此类文件，请删除。<br>修改为不可预测的文件名。<br>对管理地址进行更名，让管理地址变得不可猜测</p>
-<h2 id="存在web默认目录"><a href="#存在web默认目录" class="headerlink" title="存在web默认目录"></a>存在web默认目录</h2><p>风险等级:中危</p>
+<h1 id="存在web默认目录"><a href="#存在web默认目录" class="headerlink" title="存在web默认目录"></a>存在web默认目录</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -475,7 +473,7 @@
 <p><strong>2.解决建议</strong></p>
 </blockquote>
 <p>如果不需要这些目录，可以删除此类目录；<br>或者严格限制目录的访问权限。</p>
-<h2 id="form表单验证码点击不变"><a href="#form表单验证码点击不变" class="headerlink" title="form表单验证码点击不变"></a>form表单验证码点击不变</h2><p>风险等级:中危</p>
+<h1 id="form表单验证码点击不变"><a href="#form表单验证码点击不变" class="headerlink" title="form表单验证码点击不变"></a>form表单验证码点击不变</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -484,7 +482,7 @@
 <p><strong>2.解决建议</strong></p>
 </blockquote>
 <p>加强验证码验证模块</p>
-<h2 id="危险的HTTP请求类型"><a href="#危险的HTTP请求类型" class="headerlink" title="危险的HTTP请求类型"></a>危险的HTTP请求类型</h2><p>风险等级:中危</p>
+<h1 id="危险的HTTP请求类型"><a href="#危险的HTTP请求类型" class="headerlink" title="危险的HTTP请求类型"></a>危险的HTTP请求类型</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -493,7 +491,7 @@
 <p><strong>2.解决建议</strong></p>
 </blockquote>
 <p>如果服务器不需要支持 WebDAV，请务必禁用它，或禁止如下不必要的 HTTP 方法。</p>
-<h2 id="逻辑设计缺陷"><a href="#逻辑设计缺陷" class="headerlink" title="逻辑设计缺陷"></a>逻辑设计缺陷</h2><blockquote>
+<h1 id="逻辑设计缺陷"><a href="#逻辑设计缺陷" class="headerlink" title="逻辑设计缺陷"></a>逻辑设计缺陷</h1><blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
 <p>逻辑设计缺陷是因为产品在最初设计时由于未考虑全面，而使产品在使用中存在的一些潜在的缺陷。</p>
@@ -502,7 +500,7 @@
 </blockquote>
 <p>在输入接口设置验证，如token，验证码等。注册界面的接口不要返回太多敏感信息，以防遭到黑客制作枚举字典。验证码请不要以短数字来甚至，最好是以字母加数字进行组合，并且验证码需要设定时间期限。</p>
 <p><a href="https://zhuanlan.zhihu.com/p/19728040" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/19728040</a><br><a href="http://www.freebuf.com/vuls/112339.html" target="_blank" rel="noopener">http://www.freebuf.com/vuls/112339.html</a></p>
-<h2 id="后门"><a href="#后门" class="headerlink" title="后门"></a>后门</h2><blockquote>
+<h1 id="后门"><a href="#后门" class="headerlink" title="后门"></a>后门</h1><blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
 <p>目标网站已经被黑客入侵，拿下webshell并留下后门。</p>
@@ -510,7 +508,7 @@
 <p><strong>2.解决建议</strong></p>
 </blockquote>
 <p>管理员定期手工或用专业的webshell扫描工具全面清查服务器中的文件，删除webshell。</p>
-<h2 id="任意文件读取"><a href="#任意文件读取" class="headerlink" title="任意文件读取"></a>任意文件读取</h2><p>风险等级:中危</p>
+<h1 id="任意文件读取"><a href="#任意文件读取" class="headerlink" title="任意文件读取"></a>任意文件读取</h1><p>风险等级:中危</p>
 <blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
@@ -519,7 +517,7 @@
 <p><strong>2.解决建议</strong></p>
 </blockquote>
 <p>严格检查变量是否已经初始化;在服务器本地文件及远程文件，进行严格的检查，参数中不允许出现../之类的目录跳转符。</p>
-<h2 id="未授权访问"><a href="#未授权访问" class="headerlink" title="未授权访问"></a>未授权访问</h2><blockquote>
+<h1 id="未授权访问"><a href="#未授权访问" class="headerlink" title="未授权访问"></a>未授权访问</h1><blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
 <p>由于CMS编写时采用本地验证机制或在服务器端验证不严，黑客可以采取绕过的方式对一些敏感信息或文件进行访问或操作。</p>
@@ -528,7 +526,7 @@
 </blockquote>
 <p>将对应的应用系统进行升级。</p>
 <p>加强网站的验证机制与过滤机制，防止用户绕过过滤机制对一些敏感信息或危险功能进行访问和操作。</p>
-<h2 id="上传漏洞"><a href="#上传漏洞" class="headerlink" title="上传漏洞"></a>上传漏洞</h2><blockquote>
+<h1 id="上传漏洞"><a href="#上传漏洞" class="headerlink" title="上传漏洞"></a>上传漏洞</h1><blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
 <p>由于网站管理员的配置不当或者CMS的编写时未对上传的文件进行检查过滤或者过滤不严，致使黑客可以上传木马拿到webshell。</p>
@@ -536,7 +534,7 @@
 <p><strong>2.解决建议</strong></p>
 </blockquote>
 <p>客户端和服务端检测文件大小，文件后缀和文件内容等，并严格控制上传目录，不向用户暴露出具体路径。</p>
-<h2 id="错误详情泄漏漏洞"><a href="#错误详情泄漏漏洞" class="headerlink" title="错误详情泄漏漏洞"></a>错误详情泄漏漏洞</h2><blockquote>
+<h1 id="错误详情泄漏漏洞"><a href="#错误详情泄漏漏洞" class="headerlink" title="错误详情泄漏漏洞"></a>错误详情泄漏漏洞</h1><blockquote>
 <p><strong>1.漏洞描述</strong></p>
 </blockquote>
 <p>页面含有CGI处理错误的代码级别的详细信息，例如sql语句执行错误原因，php的错误行数等。</p>
@@ -768,4 +766,5 @@
 
 
 </body>
+<script src="/js/love.js"></script>
 </html>
